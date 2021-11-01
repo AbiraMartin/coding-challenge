@@ -1,0 +1,11 @@
+public Map<Integer,Integer> createWithElements(int... values) {
+ Map<Integer,Integer> nbOccurencesByValue = new HashMap<>();
+  for (int value : values){
+    Integer actualNbOccurence = nbOccurencesByValue.get(value); 
+    if (actualNbOccurence==null){
+        actualNbOccurence=0;
+    }
+     nbOccurencesByValue.put(value, ++actualNbOccurence);
+  }
+ return nbOccurencesByValue;
+}
